@@ -13,9 +13,11 @@ def find_mismatch(text):
         elif next_char in ")]}":
             if len(opening_brackets_stack) == 0:
                 return i+1
+            
             top = opening_brackets_stack.pop()
             if not are_matching(top.char, next_char):
                 return i+1
+            
     if len(opening_brackets_stack) > 0:
         return opening_brackets_stack[0].position
     return "Success"
