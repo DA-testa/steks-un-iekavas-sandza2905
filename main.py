@@ -29,5 +29,5 @@ def main():
     mismatch = find_mismatch(user_input)
     print(mismatch)
 
-if name == "main":
-main()
+    if name == "main":
+    main()
