@@ -26,12 +26,17 @@ def find_mismatch(text):
     return "Success"
 
 def main():
-    user_input = input("Enter the code: ")
-    mismatch = find_mismatch(user_input)
-    if mismatch == -1:
-        print("Success")
+    select = input("Choose file or user input (F or I): ")
+    if select.upper() == "F":
+        filename = input("Enter file name: ")
+        with open(filename, "r") as f:
+            for i in f:
+                print(find_mismatch(i.strip()) or "Success")
+    elif select.upper() == "I":
+        brackets = input("Enter the brackets: ")
+        print(find_mismatch(brackets) or "Success")
     else:
-        print(mismatch)
+        print("Invalid input, please choose F or I")
 
 if __name__ == "__main__":
     main()
