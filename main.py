@@ -25,9 +25,9 @@ def find_mismatch(text):
     return "Success"
 
 def main():
-user_input = input("Enter the code: ")
-mismatch = find_mismatch(user_input)
-print(mismatch)
+    user_input = input("Enter the code: ")
+    mismatch = find_mismatch(user_input)
+    print(mismatch)
 
 if name == "main":
 main()
