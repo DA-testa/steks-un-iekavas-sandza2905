@@ -27,6 +27,8 @@ def find_mismatch(text):
 
 def main():
     text = input()
+    if "F" in text:
+        filename = input()
         with open(filename, "r") as f:
             for i in f:
                 print(find_mismatch(i.strip()) or "Success")
